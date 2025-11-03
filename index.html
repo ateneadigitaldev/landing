@@ -166,7 +166,6 @@
             transition: all 0.3s ease;
             display: inline-block;
             text-decoration: none;
-            margin-left: 1rem;
         }
         
         .btn-secondary-custom:hover {
@@ -371,19 +370,22 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--primary-light);
             border-radius: 50%;
             text-align: center;
             line-height: 40px;
             margin-right: 10px;
-            color: white;
+            color: var(--primary-dark);
             transition: all 0.3s ease;
+            border: 1px solid rgba(224, 209, 232, 0.3);
         }
         
         .social-icons a:hover {
-            background: var(--primary-light);
+            background: white;
             color: var(--primary-dark);
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(7, 25, 82, 0.2);
+            border-color: var(--primary-dark);
         }
         
         /* Animaciones adicionales */
@@ -415,9 +417,30 @@
                 margin: 0.5rem 0;
             }
             
-            .btn-secondary-custom {
-                margin-left: 0;
-                margin-top: 1rem;
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-buttons .btn-secondary-custom {
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-buttons .btn-primary-custom,
+            .hero-buttons .btn-secondary-custom {
+                width: 100%;
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+            
+            .hero-buttons .btn-secondary-custom {
+                margin-left: 0 !important;
             }
         }
         
@@ -476,9 +499,9 @@
                 <div class="col-lg-6 hero-content">
                     <h1>Transformamos Ideas en Soluciones Digitales</h1>
                     <p>Impulsamos tu negocio con tecnología de vanguardia, automatización inteligente y estrategias digitales que generan resultados reales.</p>
-                    <div class="hero-buttons">
+                    <div class="hero-buttons d-flex flex-wrap align-items-center">
                         <a href="#contacto" class="btn-primary-custom">Comenzar Proyecto</a>
-                        <a href="#servicios" class="btn-secondary-custom">Ver Servicios</a>
+                        <a href="#servicios" class="btn-secondary-custom ms-3">Ver Servicios</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -719,13 +742,13 @@
                     <div class="footer-brand">Atenea Digital</div>
                     <p class="text-white-50">Transformando ideas en soluciones digitales innovadoras desde LATAM para el mundo.</p>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/company/ateneadigital-latam/" target="_blank">
+                        <a href="https://www.linkedin.com/company/ateneadigital-latam/" target="_blank" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://www.facebook.com/ateneadigital.io/" target="_blank">
+                        <a href="https://www.facebook.com/ateneadigital.io/" target="_blank" title="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/ateneadigital.io/" target="_blank">
+                        <a href="https://www.instagram.com/ateneadigital.io/" target="_blank" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
